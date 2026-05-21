@@ -43,48 +43,52 @@ header {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
 }
 
-/* Project 2: Football Field with Overlay */
+/* Project 2: Football Field with Black & White and Full Overlay */
 .football-field-project {
     width: 280px;
     height: 180px;
     margin: 0 auto;
     background-image: url('football_field.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     position: relative;
     border-radius: 4px;
     box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+    filter: grayscale(100%); /* Makes the whole project black & white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-overlay {
     width: 100%;
     height: 100%;
-    object-fit: stretch;
-    opacity: 0.75;
+    object-fit: fill;
+    opacity: 0.8;
 }
 
-/* Project 3: Dinosaur Drop-Shadow (Shadow follows contour) */
+/* Project 3: Dinosaur Drop-Shadow */
 .dinosaur-img {
     width: 220px;
     height: auto;
     filter: drop-shadow(8px 8px 6px rgba(0, 0, 0, 0.5));
 }
 
-/* Project 4: Mirrored Seagull with Shadow */
+/* Project 4: Mirrored Seagull (Flipped both horizontally and vertically) */
 .seagull-img {
     width: 280px;
     height: auto;
-    transform: scaleX(-1);
-    filter: drop-shadow(-8px 8px 5px rgba(0, 0, 0, 0.4));
+    transform: scaleX(-1) scaleY(-1); /* Flips upside down and mirrors */
+    filter: drop-shadow(-8px -8px 5px rgba(0, 0, 0, 0.4));
 }
 
-/* Project 5: Inverted Blurred Butterfly with Rounded Vignette Corners */
+/* Project 5: Inverted Neon Butterfly with Specific Leaf-Shaped Corners */
 .img-container-5 {
     width: 280px;
     height: 180px;
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 24px;
+    border-radius: 50px 0px 50px 0px; /* Cuts only top-left and bottom-right corners */
     box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
 }
 
@@ -92,16 +96,10 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: invert(1) hue-rotate(180deg) blur(1px);
+    filter: invert(100%); /* Turns orange into bright neon blue */
 }
 
 /* Project 6: Theater Stage with Centered Text Overlay */
-.football-field-project, .theater-project {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .theater-project {
     width: 280px;
     height: 180px;
@@ -111,6 +109,9 @@ header {
     background-position: center;
     border-radius: 4px;
     box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .theater-text {
